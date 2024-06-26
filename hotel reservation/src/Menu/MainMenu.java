@@ -98,7 +98,8 @@ public final class MainMenu implements IMenu {
         }
 
         rooms = hotelResource.findARoom(checkIn, checkOut);
-        if (!availableRooms.isEmpty()) {
+
+        if (!rooms.isEmpty()) {
             for (IRoom room : rooms) {
                 System.out.println(room);
                 availableRooms.add(room.getRoomNumber());
